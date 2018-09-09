@@ -5,7 +5,7 @@ GitHub API in a nice way.
 
 import datetime
 
-from search import SearchType
+from .search import SearchType
 
 from colorama import Fore, Style
 

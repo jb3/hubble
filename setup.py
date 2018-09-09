@@ -7,7 +7,7 @@ with open("hubble/__main__.py", "r") as hubble_main:
 
 version, = re.search("__version__ = \"(\d.\d.\d)\"", hubble_text).groups()
 
-packages = ["hubble"]
+packages = ["hubble_github"]
 
 with open("requirements.txt", "r") as requirements_file:
     requirements = [requirement.rstrip("\n") for requirement in requirements_file.readlines()] # noqa
@@ -25,11 +25,14 @@ setup(
     url="https://github.com/jos-b/hubble",
     packages=packages,
     package_data={"": ["LICENSE"]},
-    package_dir={"hubble": "hubble"},
+    package_dir={"hubble_github": "hubble"},
     include_package_data=True,
     python_requires=">=3.5",
     install_requires=requirements,
     license="MIT",
+    entry_points = {'console_scripts': [
+        'hubble = hubble_github.__main__:main'
+    ]},
     classifiers=[
         "Programming Language :: Python",
         "License :: OSI Approved :: MIT License",

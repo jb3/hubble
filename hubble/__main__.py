@@ -9,21 +9,22 @@ import sys
 
 import colorama
 
-from search import search
-from display import display
+from .search import search
+from .display import display
 
 __author__ = "Joseph Banks"
 __copyright__ = "Copyright 2018, Joseph Banks"
 __credits__ = ["Joseph Banks"]
 
 __license__ = "MIT"
-__version__ = "0.0.2"
+__version__ = "0.0.3"
 __maintainer__ = "Joseph Banks"
 __email__ = "joseph@josephbanks.me"
 
-if __name__ == "__main__":
-    colorama.init()
+colorama.init()
 
+
+def main():
     parser = argparse.ArgumentParser(description="Search GitHub.")
 
     parser.add_argument("search_terms", metavar="search terms",
@@ -52,3 +53,7 @@ if __name__ == "__main__":
         display(github_response, search_type)
     except (KeyboardInterrupt, EOFError):
         sys.exit(0)
+
+
+if __name__ == "__main__":
+    main()
