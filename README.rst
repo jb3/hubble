@@ -1,10 +1,11 @@
+======
 Hubble
 ======
 
 Hubble is the command-line search tool for GitHub.
 
 Installation
-------------
+============
 
 .. code-block:: bash
 
@@ -13,7 +14,7 @@ Installation
     $ hubble [search terms]
 
 Screenshots
------------
+===========
 
 User search
 -----------
