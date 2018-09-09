@@ -15,4 +15,12 @@ Installation
 Screenshots
 -----------
 
-Coming soon:tm:
+User search
+===========
+
+.. image:: https://raw.githubusercontent.com/jos-b/hubble/master/screenshots/torvalds.png
+
+Repository search
+=================
+
+.. image:: https://raw.githubusercontent.com/jos-b/hubble/master/screenshots/webhook-discord.png
