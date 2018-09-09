@@ -30,8 +30,8 @@ setup(
     python_requires=">=3.5",
     install_requires=requirements,
     license="MIT",
-    entry_points = {'console_scripts': [
-        'hubble = hubble_github.__main__:main'
+    entry_points={"console_scripts": [
+        "hubble = hubble_github.__main__:main"
     ]},
     classifiers=[
         "Programming Language :: Python",
