@@ -17,7 +17,7 @@ __copyright__ = "Copyright 2018, Joseph Banks"
 __credits__ = ["Joseph Banks"]
 
 __license__ = "MIT"
-__version__ = "0.0.3"
+__version__ = "0.0.4"
 __maintainer__ = "Joseph Banks"
 __email__ = "joseph@josephbanks.me"
 
@@ -37,7 +37,7 @@ def main():
     parser.add_argument("--type", "-t", metavar="type", type=str,
                         default="repository",
                         choices=["repository", "user"],
-                        help="The type of object to search"
+                        help="The type of object to search "
                              "GitHub for. (Default: repository)")
 
     parser.add_argument("--limit", "-l", type=int,
