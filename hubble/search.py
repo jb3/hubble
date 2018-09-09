@@ -19,11 +19,7 @@ class SearchType(enum.Enum):
     This Enum represents the types of searches we can perform
     """
     REPOSITORIES = "repositories"
-    COMMITS = "commits"
-    CODE = "code"
-    ISSUES = "issues"
     USERS = "users"
-    TOPICS = "topics"
 
 
 def search(args: argparse.Namespace) -> typing.Tuple[dict, SearchType]:
@@ -40,21 +36,9 @@ def search(args: argparse.Namespace) -> typing.Tuple[dict, SearchType]:
     if args.type == "repository":
         endpoint = "/search/repositories"
         search_type = SearchType.REPOSITORIES
-    elif args.type == "commit":
-        endpoint = "/search/commits"
-        search_type = SearchType.COMMITS
-    elif args.type == "code":
-        endpoint = "/search/code"
-        search_type = SearchType.CODE
-    elif args.type == "issue":
-        endpoint = "/search/issues"
-        search_type = SearchType.ISSUES
     elif args.type == "user":
         endpoint = "/search/users"
         search_type = SearchType.USERS
-    elif args.type == "topic":
-        endpoint = "/search/topic"
-        search_type = SearchType.TOPICS
     else:
         raise Exception("Invalid type error, this should never happen."
                         "Please report it at "

@@ -19,6 +19,38 @@ def reset(text: str) -> str:
 def display(results: dict, search_type: SearchType):
     if search_type == SearchType.REPOSITORIES:
         display_repos(results)
+    elif search_type == SearchType.USERS:
+        display_users(results)
+
+
+def display_users(results: dict):
+    for number, item in enumerate(results):
+        print(reset(f"{Fore.LIGHTMAGENTA_EX}{number + 1}."
+                    f" {Style.BRIGHT}{Fore.LIGHTGREEN_EX}"
+                    f"{item['login']}"))
+
+    number = input(reset(f"{Fore.LIGHTGREEN_EX}Enter number for"
+                         f" more information\n=> "))
+
+    try:
+        number = int(number)
+    except ValueError:
+        print(reset(f"{Fore.RED}Invalid number!"))
+        display_users(results)
+        return
+
+    if number < 1 or number > len(results):
+        print(reset(f"{Fore.RED}Invalid number!"))
+        display_users(results)
+        return
+
+    user = results[number - 1]
+
+    RA = Style.RESET_ALL
+
+    print(reset(f"{Fore.LIGHTGREEN_EX}{user['login']}{RA}"
+                f"\n\t{Style.DIM}ID: {RA}{user['id']}"
+                f"\n\t{Style.DIM}Web URL: {RA}{user['html_url']}"))
 
 
 def display_repos(results: dict):

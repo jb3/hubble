@@ -35,8 +35,7 @@ if __name__ == "__main__":
 
     parser.add_argument("--type", "-t", metavar="type", type=str,
                         default="repository",
-                        choices=["repository", "commit",
-                                 "issue", "user", "topic"],
+                        choices=["repository", "user"],
                         help="The type of object to search"
                              "GitHub for. (Default: repository)")
 
