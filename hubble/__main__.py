@@ -17,7 +17,7 @@ __copyright__ = "Copyright 2018, Joseph Banks"
 __credits__ = ["Joseph Banks"]
 
 __license__ = "MIT"
-__version__ = "0.0.4"
+__version__ = "0.0.5"
 __maintainer__ = "Joseph Banks"
 __email__ = "joseph@josephbanks.me"
 
